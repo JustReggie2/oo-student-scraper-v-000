@@ -25,7 +25,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-binding.pry
+# binding.pry
     s_attr = {}
     doc.css(".social-icon_container a").collect do |s_links|
       case s_links.css("href").text
@@ -41,6 +41,7 @@ binding.pry
       s_attr[:profile_quote] = doc.css(".profile_quote").text
       s_attr[:bio] = doc.css(".description-holder p").text
     end
+    binding.pry
     s_attr
   end
 
