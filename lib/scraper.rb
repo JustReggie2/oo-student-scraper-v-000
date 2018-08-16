@@ -28,7 +28,7 @@ class Scraper
 # binding.pry
     s_attr = {}
     doc.css(".social-icon_container a").collect do |s_links|
-      case 
+      case
       when s_links.css("href").text.include?("twitter")
         s_attr[:twitter] = s_links.css("href").text
       when s_links.css("href").text.include?("linkedin")
