@@ -38,10 +38,10 @@ class Scraper
       else
         s_attr[:blog] = s_links.css("href").text
       end
+    end
       s_attr[:profile_quote] = doc.css(".profile_quote").text
       s_attr[:bio] = doc.css(".description-holder p").text
       s_attr
-    end
     # binding.pry
     # s_attr
   end
