@@ -40,9 +40,10 @@ class Scraper
       end
       s_attr[:profile_quote] = doc.css(".profile_quote").text
       s_attr[:bio] = doc.css(".description-holder p").text
+      s_attr
     end
-    binding.pry
-    s_attr
+    # binding.pry
+    # s_attr
   end
 
 end
