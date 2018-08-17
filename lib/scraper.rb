@@ -33,11 +33,11 @@ class Scraper
     # s_blog = []
     doc.css(".social-icon-container a").each do |s_links|
       case s_links.css("href").text
-      when include?("twitter")
+      when .include?("twitter")
         s_attr[:twitter] = s_links.css("href").text
-      when include?("linkedin")
+      when .include?("linkedin")
         s_attr[:linkedin] = s_links.css("href").text
-      when include?("github")
+      when .include?("github")
         s_attr[:github] = s_links.css("href").text
       else
         s_attr[:blog] = s_links.css("href").text
